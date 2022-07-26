@@ -226,7 +226,7 @@ class ShurjoPay(object):
             logger.exception(e)
         pass
 
-    def verifty(self, order_id):
+    def verify(self, order_id):
         """
 
         :param order_id: For verification, merchants must use order_id that is sent from shurjoPay during call back.

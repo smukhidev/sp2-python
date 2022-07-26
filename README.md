@@ -43,7 +43,7 @@ from shurjopay_v2.shurjopay import ShurjoPay
 
 #initialize with the test credentials
 
-testpay = shurjoPay.ShurjoPay(prefix="NOC", currency="BDT", return_url=[URL],cancel_url=[URL], client_ip=[IP],  username=[USERNAME], password=[PASSWORD], post_address=[SURJOPAY_URL])
+testpay = ShurjoPay(prefix="NOC", currency="BDT", return_url=[URL],cancel_url=[URL], client_ip=[IP],  username=[USERNAME], password=[PASSWORD], post_address=[SURJOPAY_URL])
 testpay.checkout(1, "xyz123456789", "demo", "01682803595", "N/a", "dhaka")
 testpay.check_status(order_id="NOC6188d03129212")
 
@@ -54,7 +54,7 @@ from shurjopay_v2.shurjopay import ShurjoPay
 
 #initialize with the test credentials
 
-verifypayment = shurjoPay.ShurjoPay(prefix="NOC", currency="BDT", return_url=[URL],cancel_url=[URL], client_ip=[IP],  username=[USERNAME], password=[PASSWORD], post_address=[SURJOPAY_URL])
+verifypayment = ShurjoPay(prefix="NOC", currency="BDT", return_url=[URL],cancel_url=[URL], client_ip=[IP],  username=[USERNAME], password=[PASSWORD], post_address=[SURJOPAY_URL])
 verifypayment.verify(order_id="NOC6188d03129212")
 
 ```
@@ -101,7 +101,7 @@ You can use the ShurjoPay class as an instance, within a class or by subclassing
       }
       ```
 
-- This ```ceckout_url``` will return an HTML shurjopay form you need to render this in your application for your users to complete the transaction.
+- This ```checkout_url``` will return an HTML shurjopay form you need to render this in your application for your users to complete the transaction.
 
     ![spform](sp.png)
 - After the transaction initialized customer action status will be sent through the return_url/cancel_url with a ```query string```  ```?order_id=[SpOrderId]``` merchant should store the id for future use.
@@ -117,3 +117,12 @@ You can use the ShurjoPay class as an instance, within a class or by subclassing
   :param order_id:For transaction status, merchants must use order_id that is sent from shurjoPay during callback.
   ```
     - Response `JSON`
+### Postman Documentations
+
+    This document will illustrate the overall request and response flow.
+    URL : https://documenter.getpostman.com/view/6335853/U16dS8ig	
+		
+### Who do I talk to? ####
+	For any technical assistance please contact to: https://shurjopay.com.bd/#contacts
+
+
